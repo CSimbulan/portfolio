@@ -19,11 +19,6 @@ class Contact extends Component {
         this.setState({ [e.target.name]: e.target.value });
     };
 
-    handleSubmit = e => {
-        e.preventDefault();
-        e.target.className += " was-validated";
-    }
-
     render() {
         return (
             <div className="mini-section container-custom full-vw-width contact">
@@ -41,7 +36,6 @@ class Contact extends Component {
                                 netlify="true"
                                 data-netlify="true"
                                 data-netlify-honeypot="bot-field"
-                                onSubmit={this.handleSubmit}
                             ><input type="hidden" name="form-name" value="contact" />
                                 <div className="form-group">
                                     <p hidden>
