@@ -27,23 +27,7 @@ class Contact extends Component {
 
     handleSubmit = e => {
         e.preventDefault();
-        console.log(e.target[3].validity)
         e.target.className += " was-validated";
-        const form = e.target;
-
-        if (form[2].validity.valid && form[3].validity.valid && form[4].validity.valid && form[5].validity.valid) {
-            fetch("/", {
-                method: "POST",
-                headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: encode({
-                    "form-name": form.getAttribute("name"),
-                    ...this.state
-                })
-            })
-                .then(() => alert("success"))
-                .catch(error => alert(error));
-        }
-
     }
 
     render() {
