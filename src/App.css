@@ -1,38 +1,285 @@
 .App {
   text-align: center;
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-background {
+  /*background-image: url("./assets/ludi.jpeg");*/
+  background-color: #111933;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center top;
+  background-repeat: no-repeat;
+  text-align: center;
+  overflow-x: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Fonts */
+
+@font-face {
+  font-family: assassin;
+  src: url("./assets/assassin.ttf");
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+@font-face {
+  font-family: universalSerif;
+  src: url("./assets/Universal-Serif.ttf");
+}
+
+@font-face {
+  font-family: helloValentica;
+  src: url("./assets/HelloValentica.ttf");
+}
+
+.helloValentica {
+  font-family: helloValentica;
+  font-size: 72px;
+}
+
+/* General CSS */
+
+.gradient-blue {
+  background: #4b6cb7; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #182848,
+    #4b6cb7
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #182848,
+    #4b6cb7
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.banner-header {
+  margin: auto;
+  width: 80vw;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.banner-body {
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-width: 0 1px 1px 1px;
+  border-style: solid;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.project-img {
+  width: 75%;
+  border: solid 5px black;
+}
+
+.project-img2 {
+  width: 37.5%;
+  border: solid 5px black;
+}
+
+.container-custom {
+  margin: auto;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.max-width {
+  width: 100%;
+}
+
+.full-vw-width {
+  width: 80vw;
+}
+
+.small-padding {
+  padding: 10px;
+}
+
+.mini-section {
+  min-height: 30vh;
+  margin: auto;
+}
+
+.white-shadow {
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1),
+    0 3px 4px 1px rgba(255, 255, 255, 0.18);
+}
+
+h1,
+h2 {
+  font-family: "Montserrat", Tahoma;
+}
+
+/* Landing CSS */
+
+.landing {
+  margin-top: 100px !important;
+  padding-bottom: 30px !important;
+}
+
+.banner-text {
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: auto;
+  width: 100%;
+  padding: 10px;
+}
+
+.banner-text h1 {
+  font-size: calc(30px + 1.5vw);
+  font-family: universalSerif;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.banner-text h2 {
+  font-size: calc(10px + 1.5vw);
+  font-weight: bold;
+  color: white;
+  font-family: assassin;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.banner-text hr {
+  border-top: 5px dotted white;
+  width: 50%;
+  margin: auto;
+}
+
+.banner-text p {
+  color: white;
+  font-size: calc(8px + 1vw);
+  padding: 1em;
+}
+
+.logo {
+  border-radius: 50%;
+  width: 250px;
+}
+
+/* Skills CSS */
+
+.icons-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.icons-container svg {
+  width: 70px;
+}
+
+.icon-container {
+  padding: 15px;
+}
+
+.icon-label {
+  color: white;
+}
+
+.tech-min-height {
+  min-height: 307px;
+}
+
+/* Project CSS */
+
+.project-text {
+  font-family: "Montserrat", Tahoma;
+  font-size: large;
+  color: white;
+  text-align: left;
+  padding: 5px;
+}
+
+.project-text hr {
+  border-top: 1px solid white;
+}
+
+.project-tech {
+  font-family: "Montserrat", Tahoma;
+  font-size: large;
+  color: black;
+  background-color: white;
+  border-radius: 5px;
+  padding: 2px;
+}
+
+.project-buttons {
+  border-top: 1px dashed white;
+  padding: 10px;
+}
+
+.span-text {
+  font-family: "Montserrat", Tahoma;
+  font-size: x-large;
+  color: white;
+  padding: 50px;
+  text-align: left;
+}
+
+.min-project-height {
+  min-height: 28vh;
+}
+
+/* Navbar CSS */
+
+.navbar-link svg {
+  width: 35px;
+  height: 35px;
+  color: white;
+}
+
+.navbar-link svg:hover {
+  width: 40px;
+  height: 40px;
+  transition: 0.05s ease-in height;
+}
+
+/* Contact CSS */
+
+.contact-form {
+  width: 80%;
+  text-align: left;
+  padding: 10;
+  margin-bottom: 10;
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+/* Foot CSS */
+
+.footer-page {
+  height: 50px;
+  margin-top: 30px;
+}
+
+@media (max-width: 576px) {
+  .span-text {
+    font-size: medium;
+    padding: 20px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .full-vw-width {
+    width: 95vw !important;
+  }
+
+  .mobile-spacer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .project-img2 {
+    width: 50%;
+    border: solid 5px black;
+  }
+}
+
+@media (pointer: fine) {
+  .button-hover:hover {
+    background-color: #4b6cb7 !important;
+    transition: 0.25s ease-in background-color !important;
   }
 }
