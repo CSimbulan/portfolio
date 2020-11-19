@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import { MDBCol, MDBBtn } from "mdbreact";
 
+function encode(data) {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+}
+
 class Contact extends Component {
 
     state = {
@@ -19,6 +25,27 @@ class Contact extends Component {
         this.setState({ [e.target.name]: e.target.value });
     };
 
+    handleSubmit = e => {
+        e.preventDefault();
+        console.log(e.target[3].validity)
+        e.target.className += " was-validated";
+        const form = e.target;
+
+        if (form[2].validity.valid && form[3].validity.valid && form[4].validity.valid && form[5].validity.valid) {
+            fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: encode({
+                    "form-name": form.getAttribute("name"),
+                    ...this.state
+                })
+            })
+                .then(() => alert("success"))
+                .catch(error => alert(error));
+        }
+
+    }
+
     render() {
         return (
             <div className="mini-section container-custom full-vw-width contact">
@@ -32,10 +59,7 @@ class Contact extends Component {
                                 className="needs-validation contact-form"
                                 noValidate
                                 name="contact"
-                                method="POST"
-                                netlify="true"
-                                data-netlify="true"
-                                data-netlify-honeypot="bot-field"
+                                onSubmit={this.handleSubmit}
                             ><input type="hidden" name="form-name" value="contact" />
                                 <div className="form-group">
                                     <p hidden>
