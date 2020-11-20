@@ -277,6 +277,12 @@ h2 {
   }
 }
 
+@media (max-width: 991px) {
+  .tech-min-height {
+    min-height: 200px;
+  }
+}
+
 @media (min-width: 992px) and (max-width: 1440px) {
   .tech-min-height {
     min-height: 373px;
