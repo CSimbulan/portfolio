@@ -11,13 +11,9 @@ class Contact extends Component {
 
     state = {
         fname: "",
-        lname: "",
         email: "",
         subject: "",
         message: "",
-        city: "",
-        state: "",
-        zip: "",
     };
 
 
@@ -40,8 +36,17 @@ class Contact extends Component {
                     ...this.state
                 })
             })
-                .then(() => alert("success"))
+                .then(() => {
+                    alert("Email successfully sent!");
+                    this.setState({
+                        fname: "",
+                        email: "",
+                        subject: "",
+                        message: "",
+                    })
+                })
                 .catch(error => alert(error));
+            form.className = "needs-validation contact-form";
         }
 
     }
