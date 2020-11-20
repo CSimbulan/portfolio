@@ -277,6 +277,22 @@ h2 {
   }
 }
 
+@media (max-width: 480px) {
+  .helloValentica {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 992px) {
+  .helloValentica {
+    font-size: 48px;
+  }
+
+  .project-text {
+    padding: 20px;
+  }
+}
+
 @media (max-width: 991px) {
   .tech-min-height {
     min-height: 200px;
