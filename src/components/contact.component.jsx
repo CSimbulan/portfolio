@@ -58,7 +58,6 @@ class Contact extends Component {
                             <form
                                 className="needs-validation contact-form"
                                 noValidate
-                                name="contact"
                                 onSubmit={this.handleSubmit}
                             ><input type="hidden" name="form-name" value="contact" />
                                 <div className="form-group">
