@@ -87,7 +87,7 @@ class NavbarPage extends Component {
                             <MDBNavItem className="button-hover">
                                 <Link
                                     activeClass="active"
-                                    to="contact"
+                                    to="contactform"
                                     spy={true}
                                     smooth={true}
                                     offset={-150}

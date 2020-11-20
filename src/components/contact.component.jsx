@@ -53,7 +53,7 @@ class Contact extends Component {
 
     render() {
         return (
-            <div className="mini-section container-custom full-vw-width contact">
+            <div className="mini-section container-custom full-vw-width contactform">
                 <MDBCol className="container-custom small-padding" lg="6">
                     <div className="white-shadow max-width">
                         <div className="container-custom banner-header gradient-blue max-width">
