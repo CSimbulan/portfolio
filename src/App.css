@@ -277,6 +277,28 @@ h2 {
   }
 }
 
+@media (min-width: 992px) and (max-width: 1440px) {
+  .tech-min-height {
+    min-height: 373px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1440px) {
+  .min-project-height {
+    min-height: 370px;
+  }
+
+  h2 {
+    font-size: x-large;
+  }
+}
+
+@media (min-width: 1500px) and (min-height: 1500px) {
+  .min-project-height {
+    min-height: 20vh;
+  }
+}
+
 @media (pointer: fine) {
   .button-hover:hover {
     background-color: #4b6cb7 !important;

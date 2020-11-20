@@ -3,7 +3,7 @@ import { MDBCol, MDBBtn, MDBIcon } from "mdbreact";
 
 const Project = (props) => {
     return (
-        <MDBCol className="container-custom small-padding" lg="6">
+        <MDBCol className="container-custom small-padding" xl="6">
             <div className="white-shadow">
                 <div className="container-custom banner-header gradient-blue max-width">
                     <h2 className="white-text">{props.title}</h2>
