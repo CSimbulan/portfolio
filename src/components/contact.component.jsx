@@ -44,9 +44,9 @@ class Contact extends Component {
                         subject: "",
                         message: "",
                     })
-                    form.className = "needs-validation contact-form";
                 })
                 .catch(error => alert(error));
+            form.className = "needs-validation contact-form";
         }
 
     }
