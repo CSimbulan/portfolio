@@ -18,7 +18,7 @@ const Projects = (props) => {
                 and not being satisfied with their use. I wanted to experiment
                 with using different libraries, such as Auth0 for user
                 authentication, and Redux for managing an app-wide state."
-                liveLink="https://basketball-shot-tracker.fit/"
+                liveLink="https://basketball-shot-tracker.herokuapp.com"
                 githubLink="https://github.com/CSimbulan/basketball-shot-tracker"
                 liveBtnLabel="Live"
             />
@@ -35,7 +35,7 @@ const Projects = (props) => {
                 developing something involving a back-end. While developing
                 PickApp, I learned a lot about potential security risks while
                 storing user data."
-                liveLink="https://www.pickapp.fit/"
+                liveLink="https://pick-app-sports.herokuapp.com"
                 githubLink="https://github.com/CSimbulan/pickapp"
                 liveBtnLabel="Live"
             />
