@@ -31,7 +31,7 @@ const Projects = (props) => {
                 can sign up and create postings, indicating where and what they're
                 playing. The postings are displayed in a list format, as well as
                 markers on top of an embedded google map. Users are able to update
-                and delete their posting through their profule page. This was my first time
+                and delete their posting through their profile page. This was my first time
                 developing something involving a back-end. While developing
                 PickApp, I learned a lot about potential security risks while
                 storing user data."
