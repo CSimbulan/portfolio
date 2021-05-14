@@ -182,6 +182,16 @@ h2 {
   min-height: 307px;
 }
 
+.skills {
+  padding-bottom: 25px;
+}
+
+/* About CSS */
+
+.about {
+  padding-bottom: 30px;
+}
+
 /* Project CSS */
 
 .project-text {
@@ -234,6 +244,10 @@ h2 {
   width: 40px;
   height: 40px;
   transition: 0.05s ease-in height;
+}
+
+.projects {
+  padding-bottom: 30px;
 }
 
 /* Contact CSS */
